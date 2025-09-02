@@ -6,7 +6,7 @@
 
 ### Executando
 ```bash
-git clone https://github.com/seu-usuario/nome-do-projeto.git
+git clone https://github.com/alexandremassaro/BetOs.git
 cd nome-do-projeto
 npm install
 npx expo start
