@@ -6,7 +6,7 @@
 
 ### Executando
 ```bash
-git clone https://github.com/alexandremassaro/BetOs.git
+git clone https://github.com/alexandremassaro/BetOS.git
 cd BetOS
 npm install
 npx expo start
@@ -22,7 +22,7 @@ Escaneie o QR code com o app [Expo Go](https://expo.dev/client) no seu celular.
 
 ### 2. Clone seu fork
 ```bash
-git clone https://github.com/alexandremassaro/BetOs.git
+git clone https://github.com/alexandremassaro/BetOS.git
 cd BetOS
 npm install
 ```
