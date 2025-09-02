@@ -1,0 +1,57 @@
+- Adobe Color
+Primary:
+#024873
+#023859
+Secondary:
+#024059
+#03658C
+Terciary:
+#0388A6
+#024059
+#012E40
+Light Accent:
+#F2F2F2
+#D9D4CC
+Red:
+#F21D1D
+#D92323
+Green:
+#027353
+- Tailwind
+
+{ 'seasalt': { DEFAULT: '#f7f7f8', 100: '#2e2e35', 200: '#5c5c6a', 300: '#8d8d9c', 400: '#c2c2ca', 500: '#f7f7f8', 600: '#f8f8f9', 700: '#fafafb', 800: '#fcfcfc', 900: '#fdfdfe' }, 'columbia_blue': { DEFAULT: '#cbdbec', 100: '#182b40', 200: '#2f5680', 300: '#4b82bc', 400: '#8baed4', 500: '#cbdbec', 600: '#d5e2f0', 700: '#e0e9f3', 800: '#eaf1f7', 900: '#f5f8fb' }, 'robin_egg_blue': { DEFAULT: '#1cdbef', 100: '#032d32', 200: '#075a63', 300: '#0a8795', 400: '#0eb4c6', 500: '#1cdbef', 600: '#48e1f2', 700: '#76e9f5', 800: '#a3f0f9', 900: '#d1f8fc' }, 'silver_lake_blue': { DEFAULT: '#6488aa', 100: '#131b23', 200: '#263746', 300: '#3a5269', 400: '#4d6d8b', 500: '#6488aa', 600: '#83a0bb', 700: '#a2b8cc', 800: '#c1d0dd', 900: '#e0e7ee' }, 'yinmn_blue': { DEFAULT: '#21527a', 100: '#071018', 200: '#0d2030', 300: '#143148', 400: '#1a4160', 500: '#21527a', 600: '#3077b0', 700: '#579ad1', 800: '#8fbce0', 900: '#c7ddf0' }, 'prussian_blue': { DEFAULT: '#003155', 100: '#000a11', 200: '#001423', 300: '#001e34', 400: '#002845', 500: '#003155', 600: '#0064ab', 700: '#0195ff', 800: '#56b8ff', 900: '#aadcff' }, 'prussian_blue': { DEFAULT: '#022034', 100: '#00070b', 200: '#010d16', 300: '#011420', 400: '#021b2b', 500: '#022034', 600: '#05578e', 700: '#088de5', 800: '#50b5f9', 900: '#a7dafc' }, 'davy's_gray': { DEFAULT: '#4d4d4d', 100: '#0f0f0f', 200: '#1f1f1f', 300: '#2e2e2e', 400: '#3d3d3d', 500: '#4d4d4d', 600: '#707070', 700: '#949494', 800: '#b8b8b8', 900: '#dbdbdb' }, 'red': { DEFAULT: '#fd1d1c', 100: '#380101', 200: '#6f0101', 300: '#a70202', 400: '#de0202', 500: '#fd1d1c', 600: '#fd4949', 700: '#fe7777', 800: '#fea4a4', 900: '#ffd2d2' }, 'hooker's_green': { DEFAULT: '#4e7e6d', 100: '#101916', 200: '#1f332c', 300: '#2f4c42', 400: '#3e6557', 500: '#4e7e6d', 600: '#67a28d', 700: '#8db9aa', 800: '#b3d0c6', 900: '#d9e8e3' } }
+
+- CSV
+
+f7f7f8,cbdbec,1cdbef,6488aa,21527a,003155,022034,4d4d4d,fd1d1c,4e7e6d
+
+- With #
+
+#f7f7f8, #cbdbec, #1cdbef, #6488aa, #21527a, #003155, #022034, #4d4d4d, #fd1d1c, #4e7e6d
+
+- Array
+
+["f7f7f8","cbdbec","1cdbef","6488aa","21527a","003155","022034","4d4d4d","fd1d1c","4e7e6d"]
+
+- Object
+
+{"Seasalt":"f7f7f8","Columbia blue":"cbdbec","Robin egg blue":"1cdbef","Silver Lake Blue":"6488aa","YInMn Blue":"21527a","Prussian blue":"003155","Prussian blue 2":"022034","Davy's gray":"4d4d4d","Red":"fd1d1c","Hooker's green":"4e7e6d"}
+
+- Extended Array
+
+[{"name":"Seasalt","hex":"f7f7f8","rgb":[247,247,248],"cmyk":[0,0,0,3],"hsb":[240,0,97],"hsl":[240,7,97],"lab":[97,0,0]},{"name":"Columbia blue","hex":"cbdbec","rgb":[203,219,236],"cmyk":[14,7,0,7],"hsb":[211,14,93],"hsl":[211,46,86],"lab":[87,-2,-10]},{"name":"Robin egg blue","hex":"1cdbef","rgb":[28,219,239],"cmyk":[88,8,0,6],"hsb":[186,88,94],"hsl":[186,87,52],"lab":[80,-36,-22]},{"name":"Silver Lake Blue","hex":"6488aa","rgb":[100,136,170],"cmyk":[41,20,0,33],"hsb":[209,41,67],"hsl":[209,29,53],"lab":[55,-4,-22]},{"name":"YInMn Blue","hex":"21527a","rgb":[33,82,122],"cmyk":[73,33,0,52],"hsb":[207,73,48],"hsl":[207,57,30],"lab":[33,-2,-27]},{"name":"Prussian blue","hex":"003155","rgb":[0,49,85],"cmyk":[100,42,0,67],"hsb":[205,100,33],"hsl":[205,100,17],"lab":[19,1,-26]},{"name":"Prussian blue","hex":"022034","rgb":[2,32,52],"cmyk":[96,38,0,80],"hsb":[204,96,20],"hsl":[204,93,11],"lab":[11,-2,-16]},{"name":"Davy's gray","hex":"4d4d4d","rgb":[77,77,77],"cmyk":[0,0,0,70],"hsb":[0,0,30],"hsl":[0,0,30],"lab":[33,0,0]},{"name":"Red","hex":"fd1d1c","rgb":[253,29,28],"cmyk":[0,89,89,1],"hsb":[0,89,99],"hsl":[0,98,55],"lab":[54,77,59]},{"name":"Hooker's green","hex":"4e7e6d","rgb":[78,126,109],"cmyk":[38,0,13,51],"hsb":[159,38,49],"hsl":[159,24,40],"lab":[49,-20,4]}]
+
+- XML
+
+<palette>
+  <color name="Seasalt" hex="f7f7f8" r="247" g="247" b="248" />
+  <color name="Columbia blue" hex="cbdbec" r="203" g="219" b="236" />
+  <color name="Robin egg blue" hex="1cdbef" r="28" g="219" b="239" />
+  <color name="Silver Lake Blue" hex="6488aa" r="100" g="136" b="170" />
+  <color name="YInMn Blue" hex="21527a" r="33" g="82" b="122" />
+  <color name="Prussian blue" hex="003155" r="0" g="49" b="85" />
+  <color name="Prussian blue" hex="022034" r="2" g="32" b="52" />
+  <color name="Davy's gray" hex="4d4d4d" r="77" g="77" b="77" />
+  <color name="Red" hex="fd1d1c" r="253" g="29" b="28" />
+  <color name="Hooker's green" hex="4e7e6d" r="78" g="126" b="109" />
+</palette>
