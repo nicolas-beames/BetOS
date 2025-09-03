@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ThemedButton from "../../components/ThemedButton";
+import DashboardCard from "../../components/DashboardCard";
 import {
   ScrollView,
   View,
@@ -15,6 +16,13 @@ import { Styles } from "../../constants/Styles";
 const Dashboard = () => {
   const [refreshing, setRefreshing] = useState(false);
   const styles = Styles.title;
+
+  const textFieldArray = [
+    { label: "EQUIPAMENTO: ", text: "XXXXXXX", id: 1 },
+    { label: "TEL: ", text: "XXXXX-XXXX", id: 2 },
+    { label: "CIDADE: ", text: "XXXXXXX XX", id: 3 },
+    { label: "END: ", text: "XXXX, Nº XX; BAIRRO: XXX", id: 4 },
+  ];
 
   const handleRefresh = () => {
     setRefreshing(true);
@@ -33,7 +41,6 @@ const Dashboard = () => {
           {
             justifyContent: "flex-start",
             alignItems: "flex-start",
-            backgroundColor: "orange",
             paddingTop: 40,
             paddingLeft: 30,
             paddingRight: 20,
@@ -49,44 +56,38 @@ const Dashboard = () => {
             <RefreshControl refreshing={refreshing} onRefresh={handleRefresh} />
           }
         >
-          <View
-            style={{
-              backgroundColor: "gray",
-              padding: 20,
-              borderWidth: 2,
-              borderRadius: 8,
-              borderColor: "#e2e8f0",
-              width: "100%",
+          <DashboardCard
+            title={"OS000001 - Muffato"}
+            contentArray={textFieldArray}
+            buttonAction={() => {
+              console.log("dashboard button pressed");
             }}
-          >
-            <Text style={Styles.headline4}>OS000001 - Meussaco</Text>
-            <Text style={Styles.paragraph}>EQUIPAMENTO</Text>
-            <Text style={Styles.paragraph}>TEL:</Text>
-            <Text style={Styles.paragraph}>CIDADE:</Text>
-            <Text style={Styles.paragraph}>END:</Text>
-            <View
-              style={{
-                marginTop: 20,
-                backgroundColor: "red",
-                alignContent: "flex-end",
-                alignItems: "right",
-                alignSelf: "flex-end",
-                outlineColor: "black",
-                outlineWidth: 2,
-                borderRadius: 5,
-                borderColor: "yellow",
-                borderWidth: 3,
-              }}
-            >
-              <ThemedButton
-                text={"Abrir"}
-                style={{ width: 124 }}
-                action={() => {
-                  console.log("butao apertado");
-                }}
-              />
-            </View>
-          </View>
+            buttonText="Abrir"
+          />
+          <DashboardCard
+            title={"OS000002 - Viscardi"}
+            contentArray={textFieldArray}
+            buttonAction={() => {
+              console.log("dashboard button pressed");
+            }}
+            buttonText="Abrir"
+          />
+          <DashboardCard
+            title={"OS000003 - Santarém"}
+            contentArray={textFieldArray}
+            buttonAction={() => {
+              console.log("dashboard button pressed");
+            }}
+            buttonText="Abrir"
+          />
+          <DashboardCard
+            title={"OS000004 - Musamar"}
+            contentArray={textFieldArray}
+            buttonAction={() => {
+              console.log("dashboard button pressed");
+            }}
+            buttonText="Abrir"
+          />
         </ScrollView>
       </SafeAreaView>
     </SafeAreaProvider>
