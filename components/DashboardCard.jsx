@@ -1,7 +1,6 @@
 import { View, Text, TextInput } from "react-native";
-import { Styles } from "../constants/Styles";
 import ThemedButton from "./ThemedButton";
-// import { Colors } from "../constants/Colors";
+import { useTheme } from "../hooks/useTheme";
 
 const DashboardCard = ({
   title,
@@ -11,8 +10,7 @@ const DashboardCard = ({
   style,
   ...props
 }) => {
-  // const colorScheme = useColorScheme();
-  // const theme = Colors[colorScheme] ?? Colors.dark;
+  const { styles, theme } = useTheme();
 
   return (
     <View
@@ -27,11 +25,11 @@ const DashboardCard = ({
         width: "97%",
       }}
     >
-      <Text style={Styles.headline4}>{title}</Text>
+      <Text style={styles.headline4}>{title}</Text>
       {contentArray.map((field) => {
         return (
           <>
-            <Text style={Styles.paragraph}>
+            <Text style={styles.paragraph}>
               {field.label} {field.text}
             </Text>
           </>

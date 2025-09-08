@@ -1,9 +1,9 @@
 import { Pressable, StyleSheet, View, Text, Image } from "react-native";
-import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useEffect, useState, useContext } from "react";
+import ThemedText from "../components/ThemedText";
 import Logo from "../assets/img/logo.png";
 import { useRouter, Link } from "expo-router";
-import { Styles } from "../constants/Styles";
 import { useAuth } from "../hooks/useAuth";
 
 // Página temporária para acessar as outras rotas enquanto não são definidas as permissões
@@ -21,29 +21,25 @@ const Home = () => {
   }, [auth]);
 
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={Styles.container}>
-        <Image source={Logo} style={Styles.img} />
-        <Text style={Styles.title}>Bem Vindo</Text>
-        <Link href="/login" style={Styles.link}>
-          Tela de Login
-        </Link>
-        <Pressable
-          onPress={() => {
-            souTecnico();
-          }}
-        >
-          <Text style={Styles.link}>App de Técnicos</Text>
-        </Pressable>
-        <Pressable
-          onPress={() => {
-            souGestor();
-          }}
-        >
-          <Text style={Styles.link}>App de Gestores</Text>
-        </Pressable>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <SafeAreaView>
+      <Image source={Logo} />
+      <ThemedText title={true}>Bem Vindo</ThemedText>
+      <Link href="/login">Tela de Login</Link>
+      <Pressable
+        onPress={() => {
+          souTecnico();
+        }}
+      >
+        <ThemedText>App de Técnicos</ThemedText>
+      </Pressable>
+      <Pressable
+        onPress={() => {
+          souGestor();
+        }}
+      >
+        <ThemedText>App de Gestores</ThemedText>
+      </Pressable>
+    </SafeAreaView>
   );
 };
 

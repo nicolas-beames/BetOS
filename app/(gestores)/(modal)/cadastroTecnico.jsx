@@ -1,15 +1,19 @@
 import { StyleSheet, Text, View, Image, TextInput } from "react-native";
-import ThemedView from "../../components/ThemedView";
+import { Link, useRouter } from "expo-router";
+import ThemedView from "../../../components/ThemedView";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
-import Logo from "../../assets/img/logo.png";
-import ThemedInput from "../../components/ThemedInput";
-import ThemedButton from "../../components/ThemedButton";
-import Spacer from "../../components/Spacer";
+import Logo from "../../../assets/img/logo.png";
+import ThemedInput from "../../../components/ThemedInput";
+import ThemedButton from "../../../components/ThemedButton";
+import Spacer from "../../../components/Spacer";
 
-const Login = () => {
-  const [user, setUser] = useState("");
+const CadastroTecnico = () => {
+  const [nome, setNome] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [cpf, setCpf] = useState("");
   const [pwd, setPwd] = useState("");
+  const router = useRouter();
 
   const handlePress = (msg) => {
     console.log(msg);
@@ -18,19 +22,25 @@ const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Spacer />
-      <Image source={Logo} style={styles.img} />
-      <ThemedView>
+      <Link href="../tecnicos">
+        <Image source={Logo} style={styles.img} />
+      </Link>
+      <ThemedView style={{ backgroundColor: "red", width: "90%" }}>
         <ThemedInput
-          label={"Usuário"}
-          onChangeText={setUser}
-          placeholder={"ID Login"}
+          label={"Nome"}
+          onChangeText={setNome}
+          placeholder={"Digite o nome"}
+        />
+        <ThemedInput
+          label={"Cidade"}
+          onChangeText={setCidade}
+          placeholder={"Digite a cidade"}
           style={{ marginLeft: 24, marginRight: 24 }}
         />
         <ThemedInput
-          label={"Senha"}
-          secureTextEntry={true}
-          onChangeText={setPwd}
-          placeholder={"******"}
+          label={"CPF"}
+          onChangeText={setCpf}
+          placeholder={"Digite o CPF"}
           style={{ marginLeft: 24, marginRight: 24 }}
         />
       </ThemedView>
@@ -47,7 +57,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default CadastroTecnico;
 
 const styles = StyleSheet.create({
   container: {
