@@ -1,10 +1,14 @@
 import { Pressable, StyleSheet, View, Text, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useEffect, useState, useContext } from "react";
-import ThemedText from "../components/ThemedText";
-import Logo from "../assets/img/logo.png";
-import { useRouter, Link } from "expo-router";
+import { useEffect } from "react";
+import { useRouter } from "expo-router";
 import { useAuth } from "../hooks/useAuth";
+
+import Spacer from "../components/Spacer";
+import Logo from "../components/Logo";
+import ThemedButton from "../components/ThemedButton";
+import ThemedText from "../components/ThemedText";
+import ThemedLink from "../components/ThemedLink";
 
 // Página temporária para acessar as outras rotas enquanto não são definidas as permissões
 
@@ -21,24 +25,24 @@ const Home = () => {
   }, [auth]);
 
   return (
-    <SafeAreaView>
-      <Image source={Logo} />
+    <SafeAreaView
+      style={{
+        alignItems: "center",
+        justifyContent: "space-evenly",
+        alignContent: "space-evenly",
+        flexDirection: "column",
+      }}
+    >
+      <Logo />
       <ThemedText title={true}>Bem Vindo</ThemedText>
-      <Link href="/login">Tela de Login</Link>
-      <Pressable
-        onPress={() => {
-          souTecnico();
-        }}
-      >
-        <ThemedText>App de Técnicos</ThemedText>
-      </Pressable>
-      <Pressable
-        onPress={() => {
-          souGestor();
-        }}
-      >
-        <ThemedText>App de Gestores</ThemedText>
-      </Pressable>
+      <Spacer />
+      <ThemedLink href="/login" title={true}>
+        Tela de Login
+      </ThemedLink>
+      <Spacer />
+      <ThemedButton title={true} text={"Sou técnico"} action={souTecnico} />
+      <Spacer />
+      <ThemedButton title={true} text={"Sou gestor"} action={souGestor} />
     </SafeAreaView>
   );
 };
