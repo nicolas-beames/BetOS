@@ -3,8 +3,6 @@
 # dependencies
 node_modules/
 
-# React
-
 # Package manager
 *pnpm*
 package.json
