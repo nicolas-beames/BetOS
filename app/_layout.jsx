@@ -1,6 +1,6 @@
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { StyleSheet, Text, View, useColorScheme } from "react-native";
+import { Text, View, useColorScheme } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { createContext, useEffect, useContext, useState } from "react";

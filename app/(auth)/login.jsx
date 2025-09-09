@@ -6,6 +6,7 @@ import Logo from "../../assets/img/logo.png";
 import ThemedInput from "../../components/ThemedInput";
 import ThemedButton from "../../components/ThemedButton";
 import Spacer from "../../components/Spacer";
+import { useTheme } from "../../hooks/useTheme";
 
 const Login = () => {
   const [user, setUser] = useState("");
@@ -14,6 +15,8 @@ const Login = () => {
   const handlePress = (msg) => {
     console.log(msg);
   };
+
+  const { styles } = useTheme();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -36,7 +39,6 @@ const Login = () => {
       </ThemedView>
       <ThemedButton
         text={"Acessar"}
-        style={{ width: 124 }}
         action={() => {
           handlePress("butao apertado");
         }}
@@ -48,16 +50,3 @@ const Login = () => {
 };
 
 export default Login;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#fff",
-    fontFamily: "LouisCondensedRegular",
-    flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-around",
-  },
-  img: { padding: 20, margin: 10 },
-  title: { fontFamily: "LouisCondensedRegular", fontSize: 32 },
-});

@@ -14,7 +14,6 @@ export function AuthProvider({ children }) {
   }, []);
 
   const logout = () => {
-    console.log("Logout");
     setAuth({
       isGuest: true,
       isGestor: false,
