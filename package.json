@@ -9,8 +9,10 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/vector-icons": "^14.1.0",
     "expo": "~53.0.22",
     "expo-constants": "~17.1.7",
+    "expo-crypto": "~14.1.5",
     "expo-linking": "~7.1.7",
     "expo-router": "~5.1.5",
     "expo-splash-screen": "~0.30.10",
@@ -23,5 +25,6 @@
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
-  "private": true
+  "private": true,
+  "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
 }
