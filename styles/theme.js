@@ -11,62 +11,28 @@ export const spacing = {
 
 export const typography = {
   paragraph: {
-    fontfamily: "louiscondensedregular",
-  },
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  label: {
-    fontSize: 14,
-    fontWeight: 500,
-    lineHeight: 20,
-    color: colors.grey600,
-  },
-  input: {
-    borderRadius: 5,
-    backgroundColor: "#fff",
-    fontFace: "LouisCondensedRegular",
-    fontSize: 16,
-    lineHeight: 20,
-    borderColor: "#e2e8f0",
-    color: "#1a202c",
-    borderWidth: 1,
-    padding: 8,
-    width: 208,
-  },
-  logo: { padding: 20, margin: 10 },
-  title: { fontFamily: "LouisCondensedRegular", fontSize: 32 },
-  link: { fontSize: 24, fontFamily: "LouisCondensedRegular", color: "003155" },
-  inputText: {
-    fontFamily: "LouisCondensedRegular",
-    color: colors.grey900,
     fontSize: 16,
     lineHeight: 22,
+    fontfamily: "louiscondensedregular",
   },
-  buttonText: {
-    fontSize: 14,
-    color: "#fff",
-    fontWeight: 900,
-  },
+
   button: {
-    alignItems: "center",
-    backgroundColor: "#003155",
-    borderRadius: 8,
-    height: 37,
-    justifyContent: "center",
-  },
-  headline3: {
     fontFamily: "LouisCondensedRegular",
+    fontSize: 14,
+    fontWight: "bold",
+  },
+
+  title: { fontFamily: "LouisCondensedRegular", fontSize: 32 },
+
+  headline3: {
     fontSize: 21,
+    fontFamily: "LouisCondensedRegular",
     fontWeight: "400",
   },
   headline4: {
-    color: "#4a5566",
     fontfamily: "louiscondensedregular",
     fontsize: 17,
+    fontWeight: "bold",
     lineheight: 24,
   },
   headline6: {
@@ -80,11 +46,31 @@ export const typography = {
     fontSize: 16,
     lineHeight: 22,
   },
-  h1: { fontSize: 32, fontWeight: "bold" },
-  h2: { fontSize: 24, fontWeight: "bold" },
-  h3: { fontSize: 20, fontWeight: "600" },
-  body: { fontSize: 16, fontWeight: "normal" },
-  caption: { fontSize: 14, fontWeight: "normal" },
+  h1: {
+    fontFamily: "LouisCondensedRegular",
+    fontSize: 32,
+    fontWeight: "bold",
+  },
+  h2: {
+    fontFamily: "LouisCondensedRegular",
+    fontSize: 24,
+    fontWeight: "bold",
+  },
+  h3: {
+    fontFamily: "LouisCondensedRegular",
+    fontSize: 20,
+    fontWeight: "600",
+  },
+  body: {
+    fontFamily: "LouisCondensedRegular",
+    fontSize: 16,
+    fontWeight: "normal",
+  },
+  caption: {
+    fontFamily: "LouisCondensedRegular",
+    fontSize: 14,
+    fontWeight: "normal",
+  },
 };
 
 export const borderRadius = {
@@ -111,6 +97,7 @@ export const shadows = {
 
 export const createTheme = (isDark = false) => ({
   colors: isDark ? darkColors : lightColors,
+  defaultColors: colors,
   spacing,
   typography,
   borderRadius,

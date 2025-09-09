@@ -1,13 +1,14 @@
-import { Text, TextInput } from "react-native";
+import { View, TextInput } from "react-native";
 import { useTheme } from "../hooks/useTheme";
+import ThemedLabel from "./ThemedLabel";
 
 const ThemedInput = ({ label, labelStyle, inputStyle, style, ...props }) => {
-  const { theme, styles } = useTheme();
+  const { styles } = useTheme();
   return (
-    <>
-      {label && <Text style={[styles.text, labelStyle, style]}>{label}</Text>}
-      <TextInput style={[styles.text, inputStyle, style]} {...props} />
-    </>
+    <View style={style}>
+      <ThemedLabel text={label} />
+      <TextInput style={[styles.input, inputStyle]} {...props} />
+    </View>
   );
 };
 

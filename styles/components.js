@@ -4,11 +4,15 @@ export const createComponentStyles = (theme) =>
   StyleSheet.create({
     // Containers
     container: {
+      backgroundColor: theme.colors.surface,
       flex: 1,
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "space-around",
       backgroundColor: theme.colors.background,
       padding: theme.spacing.md,
+      ...theme.typography.body,
     },
-
     card: {
       backgroundColor: theme.colors.surface,
       borderRadius: theme.borderRadius.md,
@@ -16,7 +20,32 @@ export const createComponentStyles = (theme) =>
       ...theme.shadows.small,
     },
 
+    cardTitle: {
+      color: theme.defaultColors.grey700,
+      paddingBottom: 10,
+      ...theme.typography.headline4,
+    },
+
+    cardText: {
+      color: theme.defaultColors.grey600,
+      ...theme.typography.paragraph,
+    },
+
     // Buttons
+    button: {
+      alignItems: "center",
+      backgroundColor: theme.colors.primary,
+      borderRadius: theme.borderRadius.md,
+      height: 37,
+      justifyContent: "center",
+    },
+
+    buttonText: {
+      paddingHorizontal: theme.spacing.md,
+      color: theme.colors.surface,
+      ...theme.typography.button,
+    },
+
     primaryButton: {
       backgroundColor: theme.colors.primary,
       paddingVertical: theme.spacing.sm,
@@ -40,15 +69,22 @@ export const createComponentStyles = (theme) =>
       alignItems: "center",
     },
 
+    // Labels
+    label: {
+      color: theme.defaultColors.grey600,
+      ...theme.typography.headline6,
+    },
+
     // Inputs
     input: {
       borderWidth: 1,
-      borderColor: theme.colors.border,
-      borderRadius: theme.borderRadius.sm,
+      borderColor: theme.defaultColors.grey300,
+      borderRadius: theme.borderRadius.md,
       padding: theme.spacing.sm,
       backgroundColor: theme.colors.surface,
-      color: theme.colors.text,
-      ...theme.typography.body,
+      color: theme.defaultColors.grey900,
+      width: 208,
+      ...theme.typography.paragraph,
     },
 
     // Texts
@@ -58,9 +94,19 @@ export const createComponentStyles = (theme) =>
       marginBottom: theme.spacing.sm,
     },
 
+    // Links
+    link: {
+      fontSize: 24,
+      fontFamily: "LouisCondensedRegular",
+      color: "003155",
+    },
+
+    // Img
+    img: { padding: 20, margin: 10 },
+
     subtitle: {
-      ...theme.typography.h3,
-      color: theme.colors.textSecondary,
+      ...theme.typography.headline4,
+      color: theme.defaultColors.grey700,
       marginBottom: theme.spacing.xs,
     },
 
