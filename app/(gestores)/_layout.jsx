@@ -35,12 +35,12 @@ export default function Gestores() {
         options={{
           title: "Clientes",
           headerShown: false,
-          tabBarIcon: (focused) => (
+          tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
               name={
                 focused
-                  ? "account-box-multiple-outline"
-                  : "account-box-multiple"
+                  ? "account-box-multiple"
+                  : "account-box-multiple-outline"
               }
               size={24}
               color={focused ? "black" : "dark-gray"}
@@ -53,9 +53,9 @@ export default function Gestores() {
         options={{
           title: "Técnicos",
           headerShown: false,
-          tabBarIcon: (focused) => (
+          tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons
-              name={focused ? "account-wrench-outline" : "account-wrench"}
+              name={focused ? "account-wrench" : "account-wrench-outline"}
               size={24}
               color={focused ? "black" : "dark-gray"}
             />
