@@ -15,7 +15,7 @@ export default function Gestores() {
   }, [auth]);
 
   return (
-    <Tabs screenOptions={{ headerShown: false }}>
+    <Tabs screenOptions={{ animation: "shift", headerShown: false }}>
       <Tabs.Screen
         name="os"
         options={{
