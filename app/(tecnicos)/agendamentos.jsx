@@ -13,6 +13,7 @@ import {
 import { Link, useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useAuth } from "../../hooks/useAuth";
+import { useTheme } from "../../hooks/useTheme.jsx";
 
 const Agendamentos = () => {
   const [refreshing, setRefreshing] = useState(false);
@@ -41,20 +42,12 @@ const Agendamentos = () => {
     }
   }, [auth]);
 
+  const { styles } = useTheme();
+
   return (
-    <SafeAreaView
-      style={{
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
-        paddingTop: 40,
-        paddingLeft: 30,
-        paddingRight: 20,
-      }}
-    >
-      <Pressable onPress={logout}>
-        <ThemedText style={{ paddingTop: 20, paddingBottom: 20 }}>
-          Agendamentos
-        </ThemedText>
+    <SafeAreaView style={styles.container}>
+      <Pressable onPress={logout} style={{ alignSelf: "flex-start" }}>
+        <ThemedText title={true}>Agendamentos</ThemedText>
       </Pressable>
       <ScrollView
         style={{ width: "100%" }}

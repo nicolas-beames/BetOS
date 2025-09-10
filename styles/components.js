@@ -15,7 +15,10 @@ export const createComponentStyles = (theme) =>
     },
     card: {
       backgroundColor: theme.colors.surface,
+      borderColor: theme.defaultColors.grey300,
+      borderWidth: 1,
       borderRadius: theme.borderRadius.md,
+      margin: theme.spacing.sm,
       padding: theme.spacing.md,
       ...theme.shadows.small,
     },
@@ -92,6 +95,7 @@ export const createComponentStyles = (theme) =>
       ...theme.typography.h2,
       color: theme.colors.text,
       marginBottom: theme.spacing.sm,
+      marginLeft: theme.spacing.sm,
     },
 
     // Links
