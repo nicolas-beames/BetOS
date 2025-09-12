@@ -1,7 +1,6 @@
-import { View, Text, TextInput } from "react-native";
-import { Styles } from "../constants/Styles";
+import { View, Text } from "react-native";
 import ThemedButton from "./ThemedButton";
-// import { Colors } from "../constants/Colors";
+import { useTheme } from "../hooks/useTheme";
 
 const DashboardCard = ({
   title,
@@ -11,43 +10,23 @@ const DashboardCard = ({
   style,
   ...props
 }) => {
-  // const colorScheme = useColorScheme();
-  // const theme = Colors[colorScheme] ?? Colors.dark;
+  const { styles, theme } = useTheme();
 
   return (
-    <View
-      style={{
-        padding: 15,
-        marginTop: 10,
-        marginBottom: 10,
-        marginRight: 20,
-        borderWidth: 2,
-        borderRadius: 8,
-        borderColor: "#e2e8f0",
-        width: "97%",
-      }}
-    >
-      <Text style={Styles.headline4}>{title}</Text>
+    <View style={styles.card}>
+      <Text style={styles.cardTitle}>{title}</Text>
       {contentArray.map((field) => {
         return (
-          <>
-            <Text style={Styles.paragraph}>
-              {field.label} {field.text}
-            </Text>
-          </>
+          <Text style={styles.cardText}>
+            {field.label} {field.text}
+          </Text>
         );
       })}
       <View
-        style={{
-          marginTop: 20,
-          alignContent: "flex-end",
-          alignItems: "right",
-          alignSelf: "flex-end",
-        }}
+        style={{ paddingVertical: 5, width: "100%", alignItems: "flex-end" }}
       >
         <ThemedButton
           text={buttonText}
-          style={{ width: 124 }}
           action={() => {
             buttonAction();
           }}

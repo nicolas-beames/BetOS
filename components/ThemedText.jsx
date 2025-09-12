@@ -1,18 +1,11 @@
-import { Text, useColorScheme } from 'react-native'
-import { Colors } from '../constants/Colors'
+import { Text, View } from "react-native";
+import { useTheme } from "../hooks/useTheme";
 
 const ThemedText = ({ style, title = false, ...props }) => {
-  const colorScheme = useColorScheme()
-  const theme = Colors[colorScheme] ?? Colors.light
-
-  const textColor = title ? theme.title : theme.text
+  const { theme, styles } = useTheme();
 
   return (
-      <Text 
-        style={[{ color: textColor }, style]}
-        {...props}
-    />
-  )
-}
-
-export default ThemedText
+    <Text style={[title ? styles.title : styles.text, style]} {...props} />
+  );
+};
+export default ThemedText;
