@@ -16,6 +16,9 @@ const Home = () => {
         <Link href="/dashboard" style={styles.link}>
           Dashboard (Técnicos)
         </Link>
+        <Link href="/pingLocalizacao" style={styles.link}>
+          TESTE LOCALIZACAO 
+        </Link>
       </SafeAreaView>
     </SafeAreaProvider>
   );

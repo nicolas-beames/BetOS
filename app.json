@@ -27,7 +27,14 @@
       "favicon": "./assets/img/logo.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      "expo-sqlite"
     ]
   }
 }

@@ -57,3 +57,7 @@ Sua contribuição será analisada e, se tudo estiver ok, será incorporada ao p
 
 ## ❓ Dúvidas?
 Abra uma Issue para fazer perguntas ou reportar problemas.
+
+## DEPENDENCIAS ##
+expo-sqlite
+expo-localization
