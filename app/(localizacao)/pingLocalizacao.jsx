@@ -23,10 +23,15 @@ const Ping = () => {
         return;
       }
       let location = await Location.getCurrentPositionAsync({});
-
-      setTimeout(() => {
-        setLocation(location);
-        console.log(location);
+      console.log('=-=location=-=');
+      console.log('=-=altitude=-=: ', location.coords.altitude);
+      console.log('=-=latitude=-=: ', location.coords.latitude);
+      console.log('=-=accuracy=-=: ', location.coords.accuracy);
+      console.log('=-=timestamp=-=: ', location.timestamp);
+      
+      setInterval(() => {
+        // setLocation(location);
+        // console.log(location);
       }, 1000);
     }
 
@@ -50,8 +55,9 @@ const Ping = () => {
     // }
 
     // commitToDb();
-    setTimeout(() => {
       getCurrentLocation();
+    setInterval(() => {
+        //   getCurrentLocation();
     }, 2000);
   }, []);
 };

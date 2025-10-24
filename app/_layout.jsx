@@ -39,6 +39,7 @@ const RootLayout = () => {
             <Stack.Screen name="(auth)" />
             <Stack.Screen name="(tecnicos)/agendamentos" />
             <Stack.Screen name="(gestores)" />
+            <Stack.Screen name="(localizacao)" />
           </Stack>
         </AuthProvider>
       </ThemeProvider>
