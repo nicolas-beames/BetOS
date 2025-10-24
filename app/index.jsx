@@ -43,6 +43,10 @@ const Home = () => {
       <ThemedButton title={true} text={"Sou técnico"} action={souTecnico} />
       <Spacer />
       <ThemedButton title={true} text={"Sou gestor"} action={souGestor} />
+      <Spacer />
+      <ThemedLink href="/pingLocalizacao" title={true}>
+        Tela de Programa
+      </ThemedLink>
     </SafeAreaView>
   );
 };
