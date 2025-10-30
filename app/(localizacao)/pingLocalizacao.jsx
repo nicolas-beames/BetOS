@@ -24,7 +24,7 @@ const Ping = () => {
       }
       let location = await Location.getCurrentPositionAsync({});
       console.log('=-=location=-=');
-      console.log('=-=altitude=-=: ', location.coords.altitude);
+      console.log('=-=longitude=-=: ', location.coords.longitude);
       console.log('=-=latitude=-=: ', location.coords.latitude);
       console.log('=-=accuracy=-=: ', location.coords.accuracy);
       console.log('=-=timestamp=-=: ', location.timestamp);
