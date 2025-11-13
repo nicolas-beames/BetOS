@@ -35,18 +35,18 @@ const Home = () => {
     >
       <Logo />
       <ThemedText title={true}>Bem Vindo</ThemedText>
-      <Spacer />
-      <ThemedLink href="/login" title={true}>
+      {/* <Spacer /> */}
+      {/* <ThemedLink href="/login" title={true}>
         Tela de Login
-      </ThemedLink>
+      </ThemedLink> */}
       <Spacer />
       <ThemedButton title={true} text={"Sou técnico"} action={souTecnico} />
       <Spacer />
       <ThemedButton title={true} text={"Sou gestor"} action={souGestor} />
-      <Spacer />
-      <ThemedLink href="/pingLocalizacao" title={true}>
+      {/* <Spacer /> */}
+      {/* <ThemedLink href="/pingLocalizacao" title={true}>
         Tela de Programa
-      </ThemedLink>
+      </ThemedLink> */}
     </SafeAreaView>
   );
 };
